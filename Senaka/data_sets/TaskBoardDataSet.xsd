@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TaskBoardDataSet" targetNamespace="http://tempuri.org/TaskBoardDataSet.xsd" xmlns:mstns="http://tempuri.org/TaskBoardDataSet.xsd" xmlns="http://tempuri.org/TaskBoardDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TaskBoardDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TaskBoardDataSet" msprop:Generator_UserDSName="TaskBoardDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TaskBoardTable" msprop:Generator_TableClassName="TaskBoardTableDataTable" msprop:Generator_TableVarName="tableTaskBoardTable" msprop:Generator_TablePropName="TaskBoardTable" msprop:Generator_RowDeletingName="TaskBoardTableRowDeleting" msprop:Generator_RowChangingName="TaskBoardTableRowChanging" msprop:Generator_RowEvHandlerName="TaskBoardTableRowChangeEventHandler" msprop:Generator_RowDeletedName="TaskBoardTableRowDeleted" msprop:Generator_UserTableName="TaskBoardTable" msprop:Generator_RowChangedName="TaskBoardTableRowChanged" msprop:Generator_RowEvArgName="TaskBoardTableRowChangeEvent" msprop:Generator_RowClassName="TaskBoardTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" msprop:Generator_UserColumnName="DateTime" type="xs:string" minOccurs="0" />
+              <xs:element name="OrderNumber" msprop:Generator_ColumnVarNameInTable="columnOrderNumber" msprop:Generator_ColumnPropNameInRow="OrderNumber" msprop:Generator_ColumnPropNameInTable="OrderNumberColumn" msprop:Generator_UserColumnName="OrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="F" msprop:Generator_ColumnVarNameInTable="columnF" msprop:Generator_ColumnPropNameInRow="F" msprop:Generator_ColumnPropNameInTable="FColumn" msprop:Generator_UserColumnName="F" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="C" msprop:Generator_ColumnVarNameInTable="columnC" msprop:Generator_ColumnPropNameInRow="C" msprop:Generator_ColumnPropNameInTable="CColumn" msprop:Generator_UserColumnName="C" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="G" msprop:Generator_ColumnVarNameInTable="columnG" msprop:Generator_ColumnPropNameInRow="G" msprop:Generator_ColumnPropNameInTable="GColumn" msprop:Generator_UserColumnName="G" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="A" msprop:Generator_ColumnVarNameInTable="columnA" msprop:Generator_ColumnPropNameInRow="A" msprop:Generator_ColumnPropNameInTable="AColumn" msprop:Generator_UserColumnName="A" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="W" msprop:Generator_ColumnVarNameInTable="columnW" msprop:Generator_ColumnPropNameInRow="W" msprop:Generator_ColumnPropNameInTable="WColumn" msprop:Generator_UserColumnName="W" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="S" msprop:Generator_ColumnVarNameInTable="columnS" msprop:Generator_ColumnPropNameInRow="S" msprop:Generator_ColumnPropNameInTable="SColumn" msprop:Generator_UserColumnName="S" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Overall" msprop:Generator_ColumnVarNameInTable="columnOverall" msprop:Generator_ColumnPropNameInRow="Overall" msprop:Generator_ColumnPropNameInTable="OverallColumn" msprop:Generator_UserColumnName="Overall" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

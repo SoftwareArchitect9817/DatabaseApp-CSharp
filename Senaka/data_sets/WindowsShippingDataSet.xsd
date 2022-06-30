@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WindowsShippingDataSet" targetNamespace="http://tempuri.org/WindowsShippingDataSet.xsd" xmlns:mstns="http://tempuri.org/WindowsShippingDataSet.xsd" xmlns="http://tempuri.org/WindowsShippingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WindowsShippingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WindowsShippingDataSet" msprop:Generator_UserDSName="WindowsShippingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderNumber" msprop:Generator_ColumnVarNameInTable="columnOrderNumber" msprop:Generator_ColumnPropNameInRow="OrderNumber" msprop:Generator_ColumnPropNameInTable="OrderNumberColumn" msprop:Generator_UserColumnName="OrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="WindowQTY" msprop:Generator_ColumnVarNameInTable="columnWindowQTY" msprop:Generator_ColumnPropNameInRow="WindowQTY" msprop:Generator_ColumnPropNameInTable="WindowQTYColumn" msprop:Generator_UserColumnName="WindowQTY" type="xs:string" minOccurs="0" />
+              <xs:element name="PatioDoor" msprop:Generator_ColumnVarNameInTable="columnPatioDoor" msprop:Generator_ColumnPropNameInRow="PatioDoor" msprop:Generator_ColumnPropNameInTable="PatioDoorColumn" msprop:Generator_UserColumnName="PatioDoor" type="xs:string" minOccurs="0" />
+              <xs:element name="Casing" msprop:Generator_ColumnVarNameInTable="columnCasing" msprop:Generator_ColumnPropNameInRow="Casing" msprop:Generator_ColumnPropNameInTable="CasingColumn" msprop:Generator_UserColumnName="Casing" type="xs:string" minOccurs="0" />
+              <xs:element name="SU" msprop:Generator_ColumnVarNameInTable="columnSU" msprop:Generator_ColumnPropNameInRow="SU" msprop:Generator_ColumnPropNameInTable="SUColumn" msprop:Generator_UserColumnName="SU" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

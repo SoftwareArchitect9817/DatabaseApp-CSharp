@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OceanviewPatioDoorsDataSet" targetNamespace="http://tempuri.org/OceanviewPatioDoorsDataSet.xsd" xmlns:mstns="http://tempuri.org/OceanviewPatioDoorsDataSet.xsd" xmlns="http://tempuri.org/OceanviewPatioDoorsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OceanviewPatioDoorsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OceanviewPatioDoorsDataSet" msprop:Generator_UserDSName="OceanviewPatioDoorsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OceanviewPatioDoorsDataTable" msprop:Generator_TableClassName="OceanviewPatioDoorsDataTableDataTable" msprop:Generator_TableVarName="tableOceanviewPatioDoorsDataTable" msprop:Generator_TablePropName="OceanviewPatioDoorsDataTable" msprop:Generator_RowDeletingName="OceanviewPatioDoorsDataTableRowDeleting" msprop:Generator_RowChangingName="OceanviewPatioDoorsDataTableRowChanging" msprop:Generator_RowEvHandlerName="OceanviewPatioDoorsDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="OceanviewPatioDoorsDataTableRowDeleted" msprop:Generator_UserTableName="OceanviewPatioDoorsDataTable" msprop:Generator_RowChangedName="OceanviewPatioDoorsDataTableRowChanged" msprop:Generator_RowEvArgName="OceanviewPatioDoorsDataTableRowChangeEvent" msprop:Generator_RowClassName="OceanviewPatioDoorsDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" type="xs:string" minOccurs="0" />
+              <xs:element name="Colour" msprop:Generator_ColumnVarNameInTable="columnColour" msprop:Generator_ColumnPropNameInRow="Colour" msprop:Generator_ColumnPropNameInTable="ColourColumn" msprop:Generator_UserColumnName="Colour" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="AssmebledView" msprop:Generator_ColumnVarNameInTable="columnAssmebledView" msprop:Generator_ColumnPropNameInRow="AssmebledView" msprop:Generator_ColumnPropNameInTable="AssmebledViewColumn" msprop:Generator_UserColumnName="AssmebledView" type="xs:string" minOccurs="0" />
+              <xs:element name="Grills" msprop:Generator_ColumnVarNameInTable="columnGrills" msprop:Generator_ColumnPropNameInRow="Grills" msprop:Generator_ColumnPropNameInTable="GrillsColumn" msprop:Generator_UserColumnName="Grills" type="xs:string" minOccurs="0" />
+              <xs:element name="Internal_Blinds" msprop:Generator_ColumnVarNameInTable="columnInternal_Blinds" msprop:Generator_ColumnPropNameInRow="Internal_Blinds" msprop:Generator_ColumnPropNameInTable="Internal_BlindsColumn" msprop:Generator_UserColumnName="Internal_Blinds" type="xs:string" minOccurs="0" />
+              <xs:element name="Elite_Lock" msprop:Generator_ColumnVarNameInTable="columnElite_Lock" msprop:Generator_ColumnPropNameInRow="Elite_Lock" msprop:Generator_ColumnPropNameInTable="Elite_LockColumn" msprop:Generator_UserColumnName="Elite_Lock" type="xs:string" minOccurs="0" />
+              <xs:element name="Euro_Lock" msprop:Generator_ColumnVarNameInTable="columnEuro_Lock" msprop:Generator_ColumnPropNameInRow="Euro_Lock" msprop:Generator_ColumnPropNameInTable="Euro_LockColumn" msprop:Generator_UserColumnName="Euro_Lock" type="xs:string" minOccurs="0" />
+              <xs:element name="New_Euro_Lock" msprop:Generator_ColumnVarNameInTable="columnNew_Euro_Lock" msprop:Generator_ColumnPropNameInRow="New_Euro_Lock" msprop:Generator_ColumnPropNameInTable="New_Euro_LockColumn" msprop:Generator_UserColumnName="New_Euro_Lock" type="xs:string" minOccurs="0" />
+              <xs:element name="Security_Options" msprop:Generator_ColumnVarNameInTable="columnSecurity_Options" msprop:Generator_ColumnPropNameInRow="Security_Options" msprop:Generator_ColumnPropNameInTable="Security_OptionsColumn" msprop:Generator_UserColumnName="Security_Options" type="xs:string" minOccurs="0" />
+              <xs:element name="Door_number" msprop:Generator_ColumnVarNameInTable="columnDoor_number" msprop:Generator_ColumnPropNameInRow="Door_number" msprop:Generator_ColumnPropNameInTable="Door_numberColumn" msprop:Generator_UserColumnName="Door_number" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

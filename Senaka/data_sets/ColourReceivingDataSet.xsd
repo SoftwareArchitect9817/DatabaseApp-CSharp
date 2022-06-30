@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ColourReceivingDataSet" targetNamespace="http://tempuri.org/ColourReceivingDataSet.xsd" xmlns:mstns="http://tempuri.org/ColourReceivingDataSet.xsd" xmlns="http://tempuri.org/ColourReceivingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ColourReceivingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ColourReceivingDataSet" msprop:Generator_UserDSName="ColourReceivingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="colourReceivingDataTable" msprop:Generator_TableClassName="colourReceivingDataTableDataTable" msprop:Generator_TableVarName="tablecolourReceivingDataTable" msprop:Generator_RowChangedName="colourReceivingDataTableRowChanged" msprop:Generator_TablePropName="colourReceivingDataTable" msprop:Generator_RowDeletingName="colourReceivingDataTableRowDeleting" msprop:Generator_RowChangingName="colourReceivingDataTableRowChanging" msprop:Generator_RowEvHandlerName="colourReceivingDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="colourReceivingDataTableRowDeleted" msprop:Generator_RowClassName="colourReceivingDataTableRow" msprop:Generator_UserTableName="colourReceivingDataTable" msprop:Generator_RowEvArgName="colourReceivingDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Order_number" msprop:Generator_ColumnVarNameInTable="columnOrder_number" msprop:Generator_ColumnPropNameInRow="Order_number" msprop:Generator_ColumnPropNameInTable="Order_numberColumn" msprop:Generator_UserColumnName="Order_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Cs_F" msprop:Generator_ColumnVarNameInTable="columnCs_F" msprop:Generator_ColumnPropNameInRow="Cs_F" msprop:Generator_ColumnPropNameInTable="Cs_FColumn" msprop:Generator_UserColumnName="Cs_F" type="xs:string" minOccurs="0" />
+              <xs:element name="Cs_S" msprop:Generator_ColumnVarNameInTable="columnCs_S" msprop:Generator_ColumnPropNameInRow="Cs_S" msprop:Generator_ColumnPropNameInTable="Cs_SColumn" msprop:Generator_UserColumnName="Cs_S" type="xs:string" minOccurs="0" />
+              <xs:element name="S_F" msprop:Generator_ColumnVarNameInTable="columnS_F" msprop:Generator_ColumnPropNameInRow="S_F" msprop:Generator_ColumnPropNameInTable="S_FColumn" msprop:Generator_UserColumnName="S_F" type="xs:string" minOccurs="0" />
+              <xs:element name="L_F" msprop:Generator_ColumnVarNameInTable="columnL_F" msprop:Generator_ColumnPropNameInRow="L_F" msprop:Generator_ColumnPropNameInTable="L_FColumn" msprop:Generator_UserColumnName="L_F" type="xs:string" minOccurs="0" />
+              <xs:element name="Sl_F" msprop:Generator_ColumnVarNameInTable="columnSl_F" msprop:Generator_ColumnPropNameInRow="Sl_F" msprop:Generator_ColumnPropNameInTable="Sl_FColumn" msprop:Generator_UserColumnName="Sl_F" type="xs:string" minOccurs="0" />
+              <xs:element name="Sl_S" msprop:Generator_ColumnVarNameInTable="columnSl_S" msprop:Generator_ColumnPropNameInRow="Sl_S" msprop:Generator_ColumnPropNameInTable="Sl_SColumn" msprop:Generator_UserColumnName="Sl_S" type="xs:string" minOccurs="0" />
+              <xs:element name="Bmd" msprop:Generator_ColumnVarNameInTable="columnBmd" msprop:Generator_ColumnPropNameInRow="Bmd" msprop:Generator_ColumnPropNameInTable="BmdColumn" msprop:Generator_UserColumnName="Bmd" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msdata:Caption="Colour_in" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipped" msdata:Caption="Colour_out" msprop:Generator_ColumnVarNameInTable="columnShipped" msprop:Generator_ColumnPropNameInRow="Shipped" msprop:Generator_ColumnPropNameInTable="ShippedColumn" msprop:Generator_UserColumnName="Shipped" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipped_date" msdata:Caption="Total" msprop:Generator_ColumnVarNameInTable="columnShipped_date" msprop:Generator_ColumnPropNameInRow="Shipped_date" msprop:Generator_ColumnPropNameInTable="Shipped_dateColumn" msprop:Generator_UserColumnName="Shipped_date" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipped_time" msprop:Generator_ColumnVarNameInTable="columnShipped_time" msprop:Generator_ColumnPropNameInRow="Shipped_time" msprop:Generator_ColumnPropNameInTable="Shipped_timeColumn" msprop:Generator_UserColumnName="Shipped_time" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipped_name" msprop:Generator_ColumnVarNameInTable="columnShipped_name" msprop:Generator_ColumnPropNameInRow="Shipped_name" msprop:Generator_ColumnPropNameInTable="Shipped_nameColumn" msprop:Generator_UserColumnName="Shipped_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Shipped_Status" msprop:Generator_ColumnVarNameInTable="columnShipped_Status" msprop:Generator_ColumnPropNameInRow="Shipped_Status" msprop:Generator_ColumnPropNameInTable="Shipped_StatusColumn" msprop:Generator_UserColumnName="Shipped_Status" type="xs:string" minOccurs="0" />
+              <xs:element name="Received" msprop:Generator_ColumnVarNameInTable="columnReceived" msprop:Generator_ColumnPropNameInRow="Received" msprop:Generator_ColumnPropNameInTable="ReceivedColumn" msprop:Generator_UserColumnName="Received" type="xs:string" minOccurs="0" />
+              <xs:element name="Received_date" msprop:Generator_ColumnVarNameInTable="columnReceived_date" msprop:Generator_ColumnPropNameInRow="Received_date" msprop:Generator_ColumnPropNameInTable="Received_dateColumn" msprop:Generator_UserColumnName="Received_date" type="xs:string" minOccurs="0" />
+              <xs:element name="Received_time" msprop:Generator_ColumnVarNameInTable="columnReceived_time" msprop:Generator_ColumnPropNameInRow="Received_time" msprop:Generator_ColumnPropNameInTable="Received_timeColumn" msprop:Generator_UserColumnName="Received_time" type="xs:string" minOccurs="0" />
+              <xs:element name="Received_name" msprop:Generator_ColumnVarNameInTable="columnReceived_name" msprop:Generator_ColumnPropNameInRow="Received_name" msprop:Generator_ColumnPropNameInTable="Received_nameColumn" msprop:Generator_UserColumnName="Received_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Received_Status" msprop:Generator_ColumnVarNameInTable="columnReceived_Status" msprop:Generator_ColumnPropNameInRow="Received_Status" msprop:Generator_ColumnPropNameInTable="Received_StatusColumn" msprop:Generator_UserColumnName="Received_Status" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

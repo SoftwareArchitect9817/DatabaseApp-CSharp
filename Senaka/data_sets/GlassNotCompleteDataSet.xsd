@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GlassNotCompleteDataSet" targetNamespace="http://tempuri.org/GlassNotCompleteDataSet.xsd" xmlns:mstns="http://tempuri.org/GlassNotCompleteDataSet.xsd" xmlns="http://tempuri.org/GlassNotCompleteDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GlassNotCompleteDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GlassNotCompleteDataSet" msprop:Generator_UserDSName="GlassNotCompleteDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SuId" msprop:Generator_ColumnVarNameInTable="columnSuId" msprop:Generator_ColumnPropNameInRow="SuId" msprop:Generator_ColumnPropNameInTable="SuIdColumn" msprop:Generator_UserColumnName="SuId" type="xs:string" minOccurs="0" />
+              <xs:element name="Order" msprop:Generator_ColumnVarNameInTable="columnOrder" msprop:Generator_ColumnPropNameInRow="Order" msprop:Generator_ColumnPropNameInTable="OrderColumn" msprop:Generator_UserColumnName="Order" type="xs:string" minOccurs="0" />
+              <xs:element name="WType" msprop:Generator_ColumnVarNameInTable="columnWType" msprop:Generator_ColumnPropNameInRow="WType" msprop:Generator_ColumnPropNameInTable="WTypeColumn" msprop:Generator_UserColumnName="WType" type="xs:string" minOccurs="0" />
+              <xs:element name="Line" msprop:Generator_ColumnVarNameInTable="columnLine" msprop:Generator_ColumnPropNameInRow="Line" msprop:Generator_ColumnPropNameInTable="LineColumn" msprop:Generator_UserColumnName="Line" type="xs:string" minOccurs="0" />
+              <xs:element name="OT" msprop:Generator_ColumnVarNameInTable="columnOT" msprop:Generator_ColumnPropNameInRow="OT" msprop:Generator_ColumnPropNameInTable="OTColumn" msprop:Generator_UserColumnName="OT" type="xs:string" minOccurs="0" />
+              <xs:element name="GlassType" msprop:Generator_ColumnVarNameInTable="columnGlassType" msprop:Generator_ColumnPropNameInRow="GlassType" msprop:Generator_ColumnPropNameInTable="GlassTypeColumn" msprop:Generator_UserColumnName="GlassType" type="xs:string" minOccurs="0" />
+              <xs:element name="Spacer" msprop:Generator_ColumnVarNameInTable="columnSpacer" msprop:Generator_ColumnPropNameInRow="Spacer" msprop:Generator_ColumnPropNameInTable="SpacerColumn" msprop:Generator_UserColumnName="Spacer" type="xs:string" minOccurs="0" />
+              <xs:element name="Grills" msprop:Generator_ColumnVarNameInTable="columnGrills" msprop:Generator_ColumnPropNameInRow="Grills" msprop:Generator_ColumnPropNameInTable="GrillsColumn" msprop:Generator_UserColumnName="Grills" type="xs:string" minOccurs="0" />
+              <xs:element name="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" msprop:Generator_UserColumnName="Width" type="xs:string" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" msprop:Generator_UserColumnName="Height" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="ScannedQty" msprop:Generator_ColumnVarNameInTable="columnScannedQty" msprop:Generator_ColumnPropNameInRow="ScannedQty" msprop:Generator_ColumnPropNameInTable="ScannedQtyColumn" msprop:Generator_UserColumnName="ScannedQty" type="xs:string" minOccurs="0" />
+              <xs:element name="RackId" msprop:Generator_ColumnVarNameInTable="columnRackId" msprop:Generator_ColumnPropNameInRow="RackId" msprop:Generator_ColumnPropNameInTable="RackIdColumn" msprop:Generator_UserColumnName="RackId" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

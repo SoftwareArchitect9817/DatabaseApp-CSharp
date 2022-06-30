@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HourThermalGlass_Unit" targetNamespace="http://tempuri.org/HourThermalGlass_Unit.xsd" xmlns:mstns="http://tempuri.org/HourThermalGlass_Unit.xsd" xmlns="http://tempuri.org/HourThermalGlass_Unit.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HourThermalGlass_Unit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HourThermalGlass_Unit" msprop:Generator_UserDSName="HourThermalGlass_Unit">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HourThermalGlass_UnitTable" msprop:Generator_TableClassName="HourThermalGlass_UnitTableDataTable" msprop:Generator_TableVarName="tableHourThermalGlass_UnitTable" msprop:Generator_TablePropName="HourThermalGlass_UnitTable" msprop:Generator_RowDeletingName="HourThermalGlass_UnitTableRowDeleting" msprop:Generator_RowChangingName="HourThermalGlass_UnitTableRowChanging" msprop:Generator_RowEvHandlerName="HourThermalGlass_UnitTableRowChangeEventHandler" msprop:Generator_RowDeletedName="HourThermalGlass_UnitTableRowDeleted" msprop:Generator_UserTableName="HourThermalGlass_UnitTable" msprop:Generator_RowChangedName="HourThermalGlass_UnitTableRowChanged" msprop:Generator_RowEvArgName="HourThermalGlass_UnitTableRowChangeEvent" msprop:Generator_RowClassName="HourThermalGlass_UnitTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_number" msprop:Generator_ColumnVarNameInTable="columnId_number" msprop:Generator_ColumnPropNameInRow="Id_number" msprop:Generator_ColumnPropNameInTable="Id_numberColumn" msprop:Generator_UserColumnName="Id_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Line_number" msprop:Generator_ColumnVarNameInTable="columnLine_number" msprop:Generator_ColumnPropNameInRow="Line_number" msprop:Generator_ColumnPropNameInTable="Line_numberColumn" msprop:Generator_UserColumnName="Line_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" msprop:Generator_UserColumnName="Width" type="xs:string" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" msprop:Generator_UserColumnName="Height" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="OT" msprop:Generator_ColumnVarNameInTable="columnOT" msprop:Generator_ColumnPropNameInRow="OT" msprop:Generator_ColumnPropNameInTable="OTColumn" msprop:Generator_UserColumnName="OT" type="xs:string" minOccurs="0" />
+              <xs:element name="Spacer" msprop:Generator_ColumnVarNameInTable="columnSpacer" msprop:Generator_ColumnPropNameInRow="Spacer" msprop:Generator_ColumnPropNameInTable="SpacerColumn" msprop:Generator_UserColumnName="Spacer" type="xs:string" minOccurs="0" />
+              <xs:element name="MIL" msprop:Generator_ColumnVarNameInTable="columnMIL" msprop:Generator_ColumnPropNameInRow="MIL" msprop:Generator_ColumnPropNameInTable="MILColumn" msprop:Generator_UserColumnName="MIL" type="xs:string" minOccurs="0" />
+              <xs:element name="Grill" msprop:Generator_ColumnVarNameInTable="columnGrill" msprop:Generator_ColumnPropNameInRow="Grill" msprop:Generator_ColumnPropNameInTable="GrillColumn" msprop:Generator_UserColumnName="Grill" type="xs:string" minOccurs="0" />
+              <xs:element name="Argon_gas" msprop:Generator_ColumnVarNameInTable="columnArgon_gas" msprop:Generator_ColumnPropNameInRow="Argon_gas" msprop:Generator_ColumnPropNameInTable="Argon_gasColumn" msprop:Generator_UserColumnName="Argon_gas" type="xs:string" minOccurs="0" />
+              <xs:element name="Glass_Type" msprop:Generator_ColumnVarNameInTable="columnGlass_Type" msprop:Generator_ColumnPropNameInRow="Glass_Type" msprop:Generator_ColumnPropNameInTable="Glass_TypeColumn" msprop:Generator_UserColumnName="Glass_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HourThermalGlass_Sheet_CutToSizeTable" msprop:Generator_TableClassName="HourThermalGlass_Sheet_CutToSizeTableDataTable" msprop:Generator_TableVarName="tableHourThermalGlass_Sheet_CutToSizeTable" msprop:Generator_RowChangedName="HourThermalGlass_Sheet_CutToSizeTableRowChanged" msprop:Generator_TablePropName="HourThermalGlass_Sheet_CutToSizeTable" msprop:Generator_RowDeletingName="HourThermalGlass_Sheet_CutToSizeTableRowDeleting" msprop:Generator_RowChangingName="HourThermalGlass_Sheet_CutToSizeTableRowChanging" msprop:Generator_RowEvHandlerName="HourThermalGlass_Sheet_CutToSizeTableRowChangeEventHandler" msprop:Generator_RowDeletedName="HourThermalGlass_Sheet_CutToSizeTableRowDeleted" msprop:Generator_RowClassName="HourThermalGlass_Sheet_CutToSizeTableRow" msprop:Generator_UserTableName="HourThermalGlass_Sheet_CutToSizeTable" msprop:Generator_RowEvArgName="HourThermalGlass_Sheet_CutToSizeTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_number" msprop:Generator_ColumnVarNameInTable="columnId_number" msprop:Generator_ColumnPropNameInRow="Id_number" msprop:Generator_ColumnPropNameInTable="Id_numberColumn" msprop:Generator_UserColumnName="Id_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Line_number" msprop:Generator_ColumnVarNameInTable="columnLine_number" msprop:Generator_ColumnPropNameInRow="Line_number" msprop:Generator_ColumnPropNameInTable="Line_numberColumn" msprop:Generator_UserColumnName="Line_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Width" msprop:Generator_ColumnVarNameInTable="columnWidth" msprop:Generator_ColumnPropNameInRow="Width" msprop:Generator_ColumnPropNameInTable="WidthColumn" msprop:Generator_UserColumnName="Width" type="xs:string" minOccurs="0" />
+              <xs:element name="Height" msprop:Generator_ColumnVarNameInTable="columnHeight" msprop:Generator_ColumnPropNameInRow="Height" msprop:Generator_ColumnPropNameInTable="HeightColumn" msprop:Generator_UserColumnName="Height" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="MIL" msprop:Generator_ColumnVarNameInTable="columnMIL" msprop:Generator_ColumnPropNameInRow="MIL" msprop:Generator_ColumnPropNameInTable="MILColumn" msprop:Generator_UserColumnName="MIL" type="xs:string" minOccurs="0" />
+              <xs:element name="Glass_Type" msprop:Generator_ColumnVarNameInTable="columnGlass_Type" msprop:Generator_ColumnPropNameInRow="Glass_Type" msprop:Generator_ColumnPropNameInTable="Glass_TypeColumn" msprop:Generator_UserColumnName="Glass_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

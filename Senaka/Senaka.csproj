@@ -1,0 +1,1742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Senaka</RootNamespace>
+    <AssemblyName>Senaka</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SingleImage|AnyCPU'">
+    <OutputPath>bin\SingleImage\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SingleImage|x64'">
+    <OutputPath>bin\x64\SingleImage\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\BarcodeLib.2.2.5\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceId, Version=4.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DeviceId.4.4.0\lib\net40\DeviceId.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>lib\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Compression.Base.18.2.0.44\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.2460.0.44, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.18.2.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TrueDialog.Client, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\TrueDialog.Client.1.0.3\lib\net461\TrueDialog.Client.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountForm.designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BayCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BayCalculatorForm.Designer.cs">
+      <DependentUpon>BayCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingSubMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingSubMenuForm.Designer.cs">
+      <DependentUpon>BookingSubMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasementHardwareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasementHardwareForm.designer.cs">
+      <DependentUpon>CasementHardwareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\AddPaintComapny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\AddPaintComapny.Designer.cs">
+      <DependentUpon>AddPaintComapny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectPaintCompanyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectPaintCompanyDialog.Designer.cs">
+      <DependentUpon>SelectPaintCompanyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\ShapePDFDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\ShapePDFDialog.Designer.cs">
+      <DependentUpon>ShapePDFDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ProductionByOrdersDataSet.cs">
+      <DependentUpon>ProductionByOrdersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ProductionByOrdersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionByOrdersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\WindowsAssemblyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WindowsAssemblyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\BarcodeDataSet.cs">
+      <DependentUpon>BarcodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\CasingDataSet.Designer.cs">
+      <DependentUpon>CasingDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="data_sets\BarcodeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\FrameCutDataSet.cs">
+      <DependentUpon>FrameCutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\FrameCutDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrameCutDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\FrameReportDataSet.cs">
+      <DependentUpon>FrameReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\FrameReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrameReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\GlassLabelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassLabelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\GlassNotCompleteDataSet.cs">
+      <DependentUpon>GlassNotCompleteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\GlassNotCompleteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassNotCompleteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\WindowsShippingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WindowsShippingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\WorkOrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkOrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GlassEditRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlassEditRecordForm.Designer.cs">
+      <DependentUpon>GlassEditRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaintScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaintScheduleForm.Designer.cs">
+      <DependentUpon>PaintScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\CasingPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\CasingPrint.Designer.cs">
+      <DependentUpon>CasingPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\ProductionByOrdersPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\ProductionByOrdersPrint.Designer.cs">
+      <DependentUpon>ProductionByOrdersPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\WorkOrderPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\WorkOrderPrint.Designer.cs">
+      <DependentUpon>WorkOrderPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingReportAddtionalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShippingReportAddtionalForm.Designer.cs">
+      <DependentUpon>ShippingReportAddtionalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShippingReportForm.Designer.cs">
+      <DependentUpon>ShippingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShippingSummaryForm.Designer.cs">
+      <DependentUpon>ShippingSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="WindowsShippingInquireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsShippingInquireForm.Designer.cs">
+      <DependentUpon>WindowsShippingInquireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSummaryInquireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderSummaryInquireForm.Designer.cs">
+      <DependentUpon>OrderSummaryInquireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\FrameReportPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\FrameReportPrint.Designer.cs">
+      <DependentUpon>FrameReportPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\CasementHardwareReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\CasementHardwareReport.Designer.cs">
+      <DependentUpon>CasementHardwareReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourReceiving.designer.cs">
+      <DependentUpon>ColourReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalInquireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalInquireForm.designer.cs">
+      <DependentUpon>UniversalInquireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalShippingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalShippingReport.Designer.cs">
+      <DependentUpon>UniversalShippingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\UniversalReceivingReport.Designer.cs">
+      <DependentUpon>UniversalReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\DVCoatexColorReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\DVCoatexColorReceiving.designer.cs">
+      <DependentUpon>DVCoatexColorReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ExpressCoatingColorReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ExpressCoatingColorReceiving.designer.cs">
+      <DependentUpon>ExpressCoatingColorReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\VinylproFrameReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\VinylproFrameReceiving.designer.cs">
+      <DependentUpon>VinylproFrameReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\VinylproFrameShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\VinylproFrameShipping.designer.cs">
+      <DependentUpon>VinylproFrameShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ExpressCoatingColorShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ExpressCoatingColorShipping.designer.cs">
+      <DependentUpon>ExpressCoatingColorShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\DVCoatexColorShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\DVCoatexColorShipping.designer.cs">
+      <DependentUpon>DVCoatexColorShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourShipping.designer.cs">
+      <DependentUpon>ColourShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourReceivingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourReceivingReport.Designer.cs">
+      <DependentUpon>ColourReceivingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourShippingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorFrameShippingReceiving\ColourShippingReport.Designer.cs">
+      <DependentUpon>ColourShippingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\BookingListMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\BookingListMessageBox.Designer.cs">
+      <DependentUpon>BookingListMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\BookingPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\BookingPasswordForm.Designer.cs">
+      <DependentUpon>BookingPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\DataGidViewProgressColumn.cs" />
+    <Compile Include="component\DataGridViewDotColumn.cs" />
+    <Compile Include="component\InsertOrderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\InsertOrderDialog.Designer.cs">
+      <DependentUpon>InsertOrderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\MessageBoxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\MessageBoxDialog.Designer.cs">
+      <DependentUpon>MessageBoxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\MessageBoxDueDateOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\MessageBoxDueDateOrders.Designer.cs">
+      <DependentUpon>MessageBoxDueDateOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\NoteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\NoteDialog.Designer.cs">
+      <DependentUpon>NoteDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectDateTimeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectDateTimeDialog.Designer.cs">
+      <DependentUpon>SelectDateTimeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectDateorDateRangeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectDateorDateRangeDialog.Designer.cs">
+      <DependentUpon>SelectDateorDateRangeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectDateRangeAndNumberDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectDateRangeAndNumberDialog.Designer.cs">
+      <DependentUpon>SelectDateRangeAndNumberDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectDateRangeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectDateRangeDialog.Designer.cs">
+      <DependentUpon>SelectDateRangeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectDateDialogBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectDateDialogBooking.Designer.cs">
+      <DependentUpon>SelectDateDialogBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectOrderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectOrderDialog.Designer.cs">
+      <DependentUpon>SelectOrderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectOrderOrListDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectOrderOrListDate.designer.cs">
+      <DependentUpon>SelectOrderOrListDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\SelectProductionOrListDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\SelectProductionOrListDate.designer.cs">
+      <DependentUpon>SelectProductionOrListDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentProductionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentProductionForm.Designer.cs">
+      <DependentUpon>CurrentProductionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentProductionSubMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentProductionSubMenu.Designer.cs">
+      <DependentUpon>CurrentProductionSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomLabelForm.Designer.cs">
+      <DependentUpon>CustomLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseSettingsForm.Designer.cs">
+      <DependentUpon>DatabaseSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\BookingDataSet.cs">
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\BookingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ColourReceivingDataSet.cs">
+      <DependentUpon>ColourReceivingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ColourReceivingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColourReceivingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ColourShippingDataSet.cs">
+      <DependentUpon>ColourShippingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\ColourShippingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColourShippingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\DataSetDoorNumbers.cs">
+      <DependentUpon>DataSetDoorNumbers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\DataSetDoorNumbers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDoorNumbers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\GlassDataSet.cs">
+      <DependentUpon>GlassDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\GlassDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlassDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\HourThermalGlass_Unit.cs">
+      <DependentUpon>HourThermalGlass_Unit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\HourThermalGlass_Unit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HourThermalGlass_Unit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\OceanviewPatioDoorsDataSet.cs">
+      <DependentUpon>OceanviewPatioDoorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\OceanviewPatioDoorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OceanviewPatioDoorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\OrderDataSet.cs">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\OrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\OrderNotCompleteDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderNotCompleteDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\RushOrderDataSet.cs">
+      <DependentUpon>RushOrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\RushOrderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RushOrderDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\SummaryDataSet.cs">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\SummaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\TaskBoardDataSet.cs">
+      <DependentUpon>TaskBoardDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\TaskBoardDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaskBoardDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\VistaPatioDoorsDataSet.cs">
+      <DependentUpon>VistaPatioDoorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\VistaPatioDoorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VistaPatioDoorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="data_sets\WoodbridgeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WoodbridgeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DateSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateSettingsForm.Designer.cs">
+      <DependentUpon>DateSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="DGVPrinter_report.cs" />
+    <Compile Include="FrameClearingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameClearingForm.designer.cs">
+      <DependentUpon>FrameClearingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameClearingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameClearingReport.Designer.cs">
+      <DependentUpon>FrameClearingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameRecut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameRecut.designer.cs">
+      <DependentUpon>FrameRecut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameReceivingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameReceivingReportForm.designer.cs">
+      <DependentUpon>FrameReceivingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameShippingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameShippingReportForm.designer.cs">
+      <DependentUpon>FrameShippingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameRecutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameRecutReport.Designer.cs">
+      <DependentUpon>FrameRecutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GlassRecutReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GlassRecutReport.Designer.cs">
+      <DependentUpon>GlassRecutReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GlassReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GlassReportForm.designer.cs">
+      <DependentUpon>GlassReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameClearingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameClearingReportForm.designer.cs">
+      <DependentUpon>FrameClearingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGInquireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IGInquireForm.Designer.cs">
+      <DependentUpon>IGInquireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGInquireSubForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IGInquireSubForm.Designer.cs">
+      <DependentUpon>IGInquireSubForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGShippingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IGShippingForm.Designer.cs">
+      <DependentUpon>IGShippingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGSortingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IGSortingForm.Designer.cs">
+      <DependentUpon>IGSortingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InquireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InquireForm.designer.cs">
+      <DependentUpon>InquireForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\Data_order.cs" />
+    <Compile Include="lib\Data_TaskBoard.cs" />
+    <Compile Include="lib\Data_user.cs" />
+    <Compile Include="lib\Rack.cs" />
+    <Compile Include="lib\ToDataTableClass.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptimizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptimizeForm.Designer.cs">
+      <DependentUpon>OptimizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\FrameReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\FrameReport.designer.cs">
+      <DependentUpon>FrameReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\OptimizeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\OptimizeReportForm.Designer.cs">
+      <DependentUpon>OptimizeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\WoodbridgeFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\WoodbridgeFields.Designer.cs">
+      <DependentUpon>WoodbridgeFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\WoodbridgeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\WoodbridgeForm.Designer.cs">
+      <DependentUpon>WoodbridgeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\HourThermalGlassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\HourThermalGlassForm.Designer.cs">
+      <DependentUpon>HourThermalGlassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\HourThermalGlassFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\HourThermalGlassFields.Designer.cs">
+      <DependentUpon>HourThermalGlassFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\VistaPatioDoorsFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\VistaPatioDoorsFields.Designer.cs">
+      <DependentUpon>VistaPatioDoorsFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\OceanviewPatioFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\OceanviewPatioFields.Designer.cs">
+      <DependentUpon>OceanviewPatioFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\VistaPatioDoorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\VistaPatioDoorsForm.Designer.cs">
+      <DependentUpon>VistaPatioDoorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForms\OceanviewPatioDoorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForms\OceanviewPatioDoorsForm.Designer.cs">
+      <DependentUpon>OceanviewPatioDoorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatioDoorsShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatioDoorsShipping.designer.cs">
+      <DependentUpon>PatioDoorsShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\UniversalPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\UniversalPrint.Designer.cs">
+      <DependentUpon>UniversalPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\BarcodePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\BarcodePrint.Designer.cs">
+      <DependentUpon>BarcodePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\FramePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\FramePrint.Designer.cs">
+      <DependentUpon>FramePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\GlassLabelPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\GlassLabelPrint.Designer.cs">
+      <DependentUpon>GlassLabelPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\OrderSummeryPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\OrderSummeryPrint.Designer.cs">
+      <DependentUpon>OrderSummeryPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_forms\WindowsAssemblyPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="print_forms\WindowsAssemblyPrint.Designer.cs">
+      <DependentUpon>WindowsAssemblyPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionForm.designer.cs">
+      <DependentUpon>ProductionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionFrameCut\ColourFrameCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionFrameCut\ColourFrameCut.Designer.cs">
+      <DependentUpon>ColourFrameCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReportForm.Designer.cs">
+      <DependentUpon>ProductionReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\ProductionCountReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\ProductionCountReport.Designer.cs">
+      <DependentUpon>ProductionCountReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\RushOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\RushOrderReport.Designer.cs">
+      <DependentUpon>RushOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResult.designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lib\DB.cs" />
+    <Compile Include="lib\Settings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskBoardAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskBoardAddForm.Designer.cs">
+      <DependentUpon>TaskBoardAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskBoardForm.Designer.cs">
+      <DependentUpon>TaskBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameAssembly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameAssembly.designer.cs">
+      <DependentUpon>FrameAssembly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatioDoorsReceiving.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatioDoorsReceiving.designer.cs">
+      <DependentUpon>PatioDoorsReceiving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlassRecut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlassRecut.designer.cs">
+      <DependentUpon>GlassRecut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsWrapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsWrapping.designer.cs">
+      <DependentUpon>WindowsWrapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsShipping.designer.cs">
+      <DependentUpon>WindowsShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAssebly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsAssebly.designer.cs">
+      <DependentUpon>WindowsAssebly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\WindowsAssemblyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\WindowsAssemblyReport.Designer.cs">
+      <DependentUpon>WindowsAssemblyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\WorkScheduleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\WorkScheduleReport.Designer.cs">
+      <DependentUpon>WorkScheduleReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BayCalculatorForm.resx">
+      <DependentUpon>BayCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingSubMenuForm.resx">
+      <DependentUpon>BookingSubMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasementHardwareForm.resx">
+      <DependentUpon>CasementHardwareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\AddPaintComapny.resx">
+      <DependentUpon>AddPaintComapny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectPaintCompanyDialog.resx">
+      <DependentUpon>SelectPaintCompanyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\ShapePDFDialog.resx">
+      <DependentUpon>ShapePDFDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlassEditRecordForm.resx">
+      <DependentUpon>GlassEditRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaintScheduleForm.resx">
+      <DependentUpon>PaintScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\CasingPrint.resx">
+      <DependentUpon>CasingPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\ProductionByOrdersPrint.resx">
+      <DependentUpon>ProductionByOrdersPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\WorkOrderPrint.resx">
+      <DependentUpon>WorkOrderPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\WindowsShippingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ProductionByOrdersLabel.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\WorkOrderLabelReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\WindowsAssemblyLabelReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\FrameCutLabelReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\GlassLabelReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\CasingLabel.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingReportAddtionalForm.resx">
+      <DependentUpon>ShippingReportAddtionalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingReportForm.resx">
+      <DependentUpon>ShippingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShippingSummaryForm.resx">
+      <DependentUpon>ShippingSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsShippingInquireForm.resx">
+      <DependentUpon>WindowsShippingInquireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderSummaryInquireForm.resx">
+      <DependentUpon>OrderSummaryInquireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\FrameReportPrint.resx">
+      <DependentUpon>FrameReportPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\CasementHardwareReport.resx">
+      <DependentUpon>CasementHardwareReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ColourReceiving.resx">
+      <DependentUpon>ColourReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\UniversalInquireForm.resx">
+      <DependentUpon>UniversalInquireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\UniversalShippingReport.resx">
+      <DependentUpon>UniversalShippingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\UniversalReceivingReport.resx">
+      <DependentUpon>UniversalReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\DVCoatexColorReceiving.resx">
+      <DependentUpon>DVCoatexColorReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ExpressCoatingColorReceiving.resx">
+      <DependentUpon>ExpressCoatingColorReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\VinylproFrameReceiving.resx">
+      <DependentUpon>VinylproFrameReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\VinylproFrameShipping.resx">
+      <DependentUpon>VinylproFrameShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ExpressCoatingColorShipping.resx">
+      <DependentUpon>ExpressCoatingColorShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\DVCoatexColorShipping.resx">
+      <DependentUpon>DVCoatexColorShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ColourShipping.resx">
+      <DependentUpon>ColourShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ColourReceivingReport.resx">
+      <DependentUpon>ColourReceivingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorFrameShippingReceiving\ColourShippingReport.resx">
+      <DependentUpon>ColourShippingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\BookingListMessageBox.resx">
+      <DependentUpon>BookingListMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\BookingPasswordForm.resx">
+      <DependentUpon>BookingPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\InsertOrderDialog.resx">
+      <DependentUpon>InsertOrderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\MessageBoxDialog.resx">
+      <DependentUpon>MessageBoxDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\MessageBoxDueDateOrders.resx">
+      <DependentUpon>MessageBoxDueDateOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\NoteDialog.resx">
+      <DependentUpon>NoteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectDateTimeDialog.resx">
+      <DependentUpon>SelectDateTimeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectDateorDateRangeDialog.resx">
+      <DependentUpon>SelectDateorDateRangeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectDateRangeAndNumberDialog.resx">
+      <DependentUpon>SelectDateRangeAndNumberDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectDateRangeDialog.resx">
+      <DependentUpon>SelectDateRangeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectDateDialogBooking.resx">
+      <DependentUpon>SelectDateDialogBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectOrderDialog.resx">
+      <DependentUpon>SelectOrderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectOrderOrListDate.resx">
+      <DependentUpon>SelectOrderOrListDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="component\SelectProductionOrListDate.resx">
+      <DependentUpon>SelectProductionOrListDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentProductionForm.resx">
+      <DependentUpon>CurrentProductionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentProductionSubMenu.resx">
+      <DependentUpon>CurrentProductionSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomLabelForm.resx">
+      <DependentUpon>CustomLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseSettingsForm.resx">
+      <DependentUpon>DatabaseSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateSettingsForm.resx">
+      <DependentUpon>DateSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameClearingForm.resx">
+      <DependentUpon>FrameClearingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameClearingReport.resx">
+      <DependentUpon>FrameClearingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameRecut.resx">
+      <DependentUpon>FrameRecut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameReceivingReportForm.resx">
+      <DependentUpon>FrameReceivingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameShippingReportForm.resx">
+      <DependentUpon>FrameShippingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameRecutReport.resx">
+      <DependentUpon>FrameRecutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GlassRecutReport.resx">
+      <DependentUpon>GlassRecutReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GlassReportForm.resx">
+      <DependentUpon>GlassReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameClearingReportForm.resx">
+      <DependentUpon>FrameClearingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IGInquireForm.resx">
+      <DependentUpon>IGInquireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IGInquireSubForm.resx">
+      <DependentUpon>IGInquireSubForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IGShippingForm.resx">
+      <DependentUpon>IGShippingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IGSortingForm.resx">
+      <DependentUpon>IGSortingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InquireForm.resx">
+      <DependentUpon>InquireForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptimizeForm.resx">
+      <DependentUpon>OptimizeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\FrameReport.resx">
+      <DependentUpon>FrameReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\OptimizeReportForm.resx">
+      <DependentUpon>OptimizeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\WoodbridgeFields.resx">
+      <DependentUpon>WoodbridgeFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\WoodbridgeForm.resx">
+      <DependentUpon>WoodbridgeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\HourThermalGlassForm.resx">
+      <DependentUpon>HourThermalGlassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\HourThermalGlassFields.resx">
+      <DependentUpon>HourThermalGlassFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\VistaPatioDoorsFields.resx">
+      <DependentUpon>VistaPatioDoorsFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\OceanviewPatioFields.resx">
+      <DependentUpon>OceanviewPatioFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\VistaPatioDoorsForm.resx">
+      <DependentUpon>VistaPatioDoorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForms\OceanviewPatioDoorsForm.resx">
+      <DependentUpon>OceanviewPatioDoorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatioDoorsShipping.resx">
+      <DependentUpon>PatioDoorsShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\UniversalPrint.resx">
+      <DependentUpon>UniversalPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\BarcodePrint.resx">
+      <DependentUpon>BarcodePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\FramePrint.resx">
+      <DependentUpon>FramePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\GlassLabelPrint.resx">
+      <DependentUpon>GlassLabelPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\OrderSummeryPrint.resx">
+      <DependentUpon>OrderSummeryPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_forms\WindowsAssemblyPrint.resx">
+      <DependentUpon>WindowsAssemblyPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionForm.resx">
+      <DependentUpon>ProductionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionFrameCut\ColourFrameCut.resx">
+      <DependentUpon>ColourFrameCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReportForm.resx">
+      <DependentUpon>ProductionReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\ProductionCountReport.resx">
+      <DependentUpon>ProductionCountReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\BarcodeReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\GlassNotComplete_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\FrameShipping_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\FrameReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\UniversalShippingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\UniversalReceivingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\RushOrderReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\WorkSchedule_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Report2.rdlc" />
+    <EmbeddedResource Include="reports\SummaryReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ColourReceivingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ColourShippingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\FrameClearingNotComplete_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Booking_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Glass_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\TaskBoardReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\OceanviewPatioDoorsReportStock.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\VistaPatioDoorsReportStock.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Woodbridge_Sheet_CutToSize_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\FrameClearingReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\HourThermalGlass_Unit_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\VistaPatioDoorsReportCustom.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\OceanviewPatioDoorsReportCustom.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\OptimizationReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ProductReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\Report1.rdlc" />
+    <EmbeddedResource Include="ReportForms\RushOrderReport.resx">
+      <DependentUpon>RushOrderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskBoardAddForm.resx">
+      <DependentUpon>TaskBoardAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskBoardForm.resx">
+      <DependentUpon>TaskBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameAssembly.resx">
+      <DependentUpon>FrameAssembly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsAssebly.resx">
+      <DependentUpon>WindowsAssebly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\WindowsAssemblyReport.resx">
+      <DependentUpon>WindowsAssemblyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatioDoorsReceiving.resx">
+      <DependentUpon>PatioDoorsReceiving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlassRecut.resx">
+      <DependentUpon>GlassRecut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsWrapping.resx">
+      <DependentUpon>WindowsWrapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsShipping.resx">
+      <DependentUpon>WindowsShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\WorkScheduleReport.resx">
+      <DependentUpon>WorkScheduleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="data_sets\ProductionByOrdersDataSet.xsc">
+      <DependentUpon>ProductionByOrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\ProductionByOrdersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionByOrdersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\ProductionByOrdersDataSet.xss">
+      <DependentUpon>ProductionByOrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WindowsAssemblyDataSet.xsc">
+      <DependentUpon>WindowsAssemblyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WindowsAssemblyDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WindowsAssemblyDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\WindowsAssemblyDataSet.xss">
+      <DependentUpon>WindowsAssemblyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\CasingDataSet.xsc">
+      <DependentUpon>CasingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\CasingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CasingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data_sets\CasingDataSet.xss">
+      <DependentUpon>CasingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\BarcodeDataSet.xsc">
+      <DependentUpon>BarcodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\BarcodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BarcodeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="data_sets\BarcodeDataSet.xss">
+      <DependentUpon>BarcodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\BookingDataSet.xsc">
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\BookingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\BookingDataSet.xss">
+      <DependentUpon>BookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\ColourReceivingDataSet.xsc">
+      <DependentUpon>ColourReceivingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\ColourReceivingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColourReceivingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\ColourReceivingDataSet.xss">
+      <DependentUpon>ColourReceivingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\ColourShippingDataSet.xsc">
+      <DependentUpon>ColourShippingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\ColourShippingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColourShippingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\ColourShippingDataSet.xss">
+      <DependentUpon>ColourShippingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\DataSetDoorNumbers.xsc">
+      <DependentUpon>DataSetDoorNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\DataSetDoorNumbers.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDoorNumbers.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\DataSetDoorNumbers.xss">
+      <DependentUpon>DataSetDoorNumbers.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\FrameCutDataSet.xsc">
+      <DependentUpon>FrameCutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\FrameCutDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FrameCutDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\FrameCutDataSet.xss">
+      <DependentUpon>FrameCutDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\FrameReportDataSet.xsc">
+      <DependentUpon>FrameReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\FrameReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FrameReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\FrameReportDataSet.xss">
+      <DependentUpon>FrameReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassDataSet.xsc">
+      <DependentUpon>GlassDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\GlassDataSet.xss">
+      <DependentUpon>GlassDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassLabelDataSet.xsc">
+      <DependentUpon>GlassLabelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassLabelDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassLabelDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\GlassLabelDataSet.xss">
+      <DependentUpon>GlassLabelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassNotCompleteDataSet.xsc">
+      <DependentUpon>GlassNotCompleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\GlassNotCompleteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GlassNotCompleteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\GlassNotCompleteDataSet.xss">
+      <DependentUpon>GlassNotCompleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\HourThermalGlass_Unit.xsc">
+      <DependentUpon>HourThermalGlass_Unit.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\HourThermalGlass_Unit.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HourThermalGlass_Unit.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\HourThermalGlass_Unit.xss">
+      <DependentUpon>HourThermalGlass_Unit.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OceanviewPatioDoorsDataSet.xsc">
+      <DependentUpon>OceanviewPatioDoorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OceanviewPatioDoorsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OceanviewPatioDoorsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\OceanviewPatioDoorsDataSet.xss">
+      <DependentUpon>OceanviewPatioDoorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OrderDataSet.xsc">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\OrderDataSet.xss">
+      <DependentUpon>OrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OrderNotCompleteDataSet.xsc">
+      <DependentUpon>OrderNotCompleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\OrderNotCompleteDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderNotCompleteDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\OrderNotCompleteDataSet.xss">
+      <DependentUpon>OrderNotCompleteDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\RushOrderDataSet.xsc">
+      <DependentUpon>RushOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\RushOrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RushOrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\RushOrderDataSet.xss">
+      <DependentUpon>RushOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\SummaryDataSet.xsc">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\SummaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SummaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\SummaryDataSet.xss">
+      <DependentUpon>SummaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\TaskBoardDataSet.xsc">
+      <DependentUpon>TaskBoardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\TaskBoardDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaskBoardDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\TaskBoardDataSet.xss">
+      <DependentUpon>TaskBoardDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\VistaPatioDoorsDataSet.xsc">
+      <DependentUpon>VistaPatioDoorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\VistaPatioDoorsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VistaPatioDoorsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\VistaPatioDoorsDataSet.xss">
+      <DependentUpon>VistaPatioDoorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WindowsShippingDataSet.xsc">
+      <DependentUpon>WindowsShippingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WindowsShippingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WindowsShippingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\WindowsShippingDataSet.xss">
+      <DependentUpon>WindowsShippingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WoodbridgeDataSet.xsc">
+      <DependentUpon>WoodbridgeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WoodbridgeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WoodbridgeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\WoodbridgeDataSet.xss">
+      <DependentUpon>WoodbridgeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WorkOrderDataSet.xsc">
+      <DependentUpon>WorkOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="data_sets\WorkOrderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkOrderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="data_sets\WorkOrderDataSet.xss">
+      <DependentUpon>WorkOrderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="images\calendar2.png" />
+    <Content Include="images\csa.jpg" />
+    <Content Include="images\energystar.jpg" />
+    <Content Include="images\left-arrow.png" />
+    <Content Include="images\map2.jpg" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\trapezoid.png" />
+    <Content Include="images\vp-logo.png" />
+    <Content Include="images\vplogo.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

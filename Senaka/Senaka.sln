@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senaka", "Senaka.csproj", "{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		SingleImage|Any CPU = SingleImage|Any CPU
+		SingleImage|x64 = SingleImage|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Debug|x64.ActiveCfg = Debug|x64
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Debug|x64.Build.0 = Debug|x64
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Release|x64.ActiveCfg = Release|x64
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.Release|x64.Build.0 = Release|x64
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.SingleImage|Any CPU.ActiveCfg = SingleImage|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.SingleImage|Any CPU.Build.0 = SingleImage|Any CPU
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.SingleImage|x64.ActiveCfg = SingleImage|x64
+		{F89F20B7-BDEF-4EEB-85F4-9ABACB544F5F}.SingleImage|x64.Build.0 = SingleImage|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

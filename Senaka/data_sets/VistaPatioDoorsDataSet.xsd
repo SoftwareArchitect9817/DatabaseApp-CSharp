@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VistaPatioDoorsDataSet" targetNamespace="http://tempuri.org/VistaPatioDoorsDataSet.xsd" xmlns:mstns="http://tempuri.org/VistaPatioDoorsDataSet.xsd" xmlns="http://tempuri.org/VistaPatioDoorsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VistaPatioDoorsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="VistaPatioDoorsDataSet" msprop:Generator_UserDSName="VistaPatioDoorsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VistaPatioDoorsDataTable" msprop:Generator_TableClassName="VistaPatioDoorsDataTableDataTable" msprop:Generator_TableVarName="tableVistaPatioDoorsDataTable" msprop:Generator_RowChangedName="VistaPatioDoorsDataTableRowChanged" msprop:Generator_TablePropName="VistaPatioDoorsDataTable" msprop:Generator_RowDeletingName="VistaPatioDoorsDataTableRowDeleting" msprop:Generator_RowChangingName="VistaPatioDoorsDataTableRowChanging" msprop:Generator_RowEvHandlerName="VistaPatioDoorsDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaPatioDoorsDataTableRowDeleted" msprop:Generator_RowClassName="VistaPatioDoorsDataTableRow" msprop:Generator_UserTableName="VistaPatioDoorsDataTable" msprop:Generator_RowEvArgName="VistaPatioDoorsDataTableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:string" minOccurs="0" />
+              <xs:element name="DOOR_SIZE" msdata:Caption="Size" msprop:Generator_ColumnVarNameInTable="columnDOOR_SIZE" msprop:Generator_ColumnPropNameInRow="DOOR_SIZE" msprop:Generator_ColumnPropNameInTable="DOOR_SIZEColumn" msprop:Generator_UserColumnName="DOOR_SIZE" type="xs:string" minOccurs="0" />
+              <xs:element name="Order_number" msprop:Generator_ColumnVarNameInTable="columnOrder_number" msprop:Generator_ColumnPropNameInRow="Order_number" msprop:Generator_ColumnPropNameInTable="Order_numberColumn" msprop:Generator_UserColumnName="Order_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="KNOCKED_DOWN" msdata:Caption="Colour" msprop:Generator_ColumnVarNameInTable="columnKNOCKED_DOWN" msprop:Generator_ColumnPropNameInRow="KNOCKED_DOWN" msprop:Generator_ColumnPropNameInTable="KNOCKED_DOWNColumn" msprop:Generator_UserColumnName="KNOCKED_DOWN" type="xs:string" minOccurs="0" />
+              <xs:element name="ASSEMBLED" msdata:Caption="AssmebledView" msprop:Generator_ColumnVarNameInTable="columnASSEMBLED" msprop:Generator_ColumnPropNameInRow="ASSEMBLED" msprop:Generator_ColumnPropNameInTable="ASSEMBLEDColumn" msprop:Generator_UserColumnName="ASSEMBLED" type="xs:string" minOccurs="0" />
+              <xs:element name="FINISHES" msdata:Caption="Grills" msprop:Generator_ColumnVarNameInTable="columnFINISHES" msprop:Generator_ColumnPropNameInRow="FINISHES" msprop:Generator_ColumnPropNameInTable="FINISHESColumn" msprop:Generator_UserColumnName="FINISHES" type="xs:string" minOccurs="0" />
+              <xs:element name="GLAZING_OPTIONS" msdata:Caption="Internal_Blinds" msprop:Generator_ColumnVarNameInTable="columnGLAZING_OPTIONS" msprop:Generator_ColumnPropNameInRow="GLAZING_OPTIONS" msprop:Generator_ColumnPropNameInTable="GLAZING_OPTIONSColumn" msprop:Generator_UserColumnName="GLAZING_OPTIONS" type="xs:string" minOccurs="0" />
+              <xs:element name="MINI_BLINDS" msdata:Caption="Elite_Lock" msprop:Generator_ColumnVarNameInTable="columnMINI_BLINDS" msprop:Generator_ColumnPropNameInRow="MINI_BLINDS" msprop:Generator_ColumnPropNameInTable="MINI_BLINDSColumn" msprop:Generator_UserColumnName="MINI_BLINDS" type="xs:string" minOccurs="0" />
+              <xs:element name="GRILLS" msdata:Caption="Euro_Lock" msprop:Generator_ColumnVarNameInTable="columnGRILLS" msprop:Generator_ColumnPropNameInRow="GRILLS" msprop:Generator_ColumnPropNameInTable="GRILLSColumn" msprop:Generator_UserColumnName="GRILLS" type="xs:string" minOccurs="0" />
+              <xs:element name="INTERIOR_EXTENTIONS" msdata:Caption="New_Euro_Lock" msprop:Generator_ColumnVarNameInTable="columnINTERIOR_EXTENTIONS" msprop:Generator_ColumnPropNameInRow="INTERIOR_EXTENTIONS" msprop:Generator_ColumnPropNameInTable="INTERIOR_EXTENTIONSColumn" msprop:Generator_UserColumnName="INTERIOR_EXTENTIONS" type="xs:string" minOccurs="0" />
+              <xs:element name="BRICKMOULD" msdata:Caption="Security_Options" msprop:Generator_ColumnVarNameInTable="columnBRICKMOULD" msprop:Generator_ColumnPropNameInRow="BRICKMOULD" msprop:Generator_ColumnPropNameInTable="BRICKMOULDColumn" msprop:Generator_UserColumnName="BRICKMOULD" type="xs:string" minOccurs="0" />
+              <xs:element name="VINYL_PACKAGE" msprop:Generator_ColumnVarNameInTable="columnVINYL_PACKAGE" msprop:Generator_ColumnPropNameInRow="VINYL_PACKAGE" msprop:Generator_ColumnPropNameInTable="VINYL_PACKAGEColumn" msprop:Generator_UserColumnName="VINYL_PACKAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="SILL_EXTENTION" msprop:Generator_ColumnVarNameInTable="columnSILL_EXTENTION" msprop:Generator_ColumnPropNameInRow="SILL_EXTENTION" msprop:Generator_ColumnPropNameInTable="SILL_EXTENTIONColumn" msprop:Generator_UserColumnName="SILL_EXTENTION" type="xs:string" minOccurs="0" />
+              <xs:element name="NAILING_FIN" msprop:Generator_ColumnVarNameInTable="columnNAILING_FIN" msprop:Generator_ColumnPropNameInRow="NAILING_FIN" msprop:Generator_ColumnPropNameInTable="NAILING_FINColumn" msprop:Generator_UserColumnName="NAILING_FIN" type="xs:string" minOccurs="0" />
+              <xs:element name="DRYWALL_RETURN" msprop:Generator_ColumnVarNameInTable="columnDRYWALL_RETURN" msprop:Generator_ColumnPropNameInRow="DRYWALL_RETURN" msprop:Generator_ColumnPropNameInTable="DRYWALL_RETURNColumn" msprop:Generator_UserColumnName="DRYWALL_RETURN" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCKING_HARDWARE" msprop:Generator_ColumnVarNameInTable="columnLOCKING_HARDWARE" msprop:Generator_ColumnPropNameInRow="LOCKING_HARDWARE" msprop:Generator_ColumnPropNameInTable="LOCKING_HARDWAREColumn" msprop:Generator_UserColumnName="LOCKING_HARDWARE" type="xs:string" minOccurs="0" />
+              <xs:element name="SERIES" msprop:Generator_ColumnVarNameInTable="columnSERIES" msprop:Generator_ColumnPropNameInRow="SERIES" msprop:Generator_ColumnPropNameInTable="SERIESColumn" msprop:Generator_UserColumnName="SERIES" type="xs:string" minOccurs="0" />
+              <xs:element name="SECONDARY_HARDWARE" msprop:Generator_ColumnVarNameInTable="columnSECONDARY_HARDWARE" msprop:Generator_ColumnPropNameInRow="SECONDARY_HARDWARE" msprop:Generator_ColumnPropNameInTable="SECONDARY_HARDWAREColumn" msprop:Generator_UserColumnName="SECONDARY_HARDWARE" type="xs:string" minOccurs="0" />
+              <xs:element name="Transom_Size" msprop:Generator_ColumnVarNameInTable="columnTransom_Size" msprop:Generator_ColumnPropNameInRow="Transom_Size" msprop:Generator_ColumnPropNameInTable="Transom_SizeColumn" msprop:Generator_UserColumnName="Transom_Size" type="xs:string" minOccurs="0" />
+              <xs:element name="Sidelite_Size" msprop:Generator_ColumnVarNameInTable="columnSidelite_Size" msprop:Generator_ColumnPropNameInRow="Sidelite_Size" msprop:Generator_ColumnPropNameInTable="Sidelite_SizeColumn" msprop:Generator_UserColumnName="Sidelite_Size" type="xs:string" minOccurs="0" />
+              <xs:element name="LUXURY_PACKAGES" msprop:Generator_ColumnVarNameInTable="columnLUXURY_PACKAGES" msprop:Generator_ColumnPropNameInRow="LUXURY_PACKAGES" msprop:Generator_ColumnPropNameInTable="LUXURY_PACKAGESColumn" msprop:Generator_UserColumnName="LUXURY_PACKAGES" type="xs:string" minOccurs="0" />
+              <xs:element name="Door_number" msprop:Generator_ColumnVarNameInTable="columnDoor_number" msprop:Generator_ColumnPropNameInRow="Door_number" msprop:Generator_ColumnPropNameInTable="Door_numberColumn" msprop:Generator_UserColumnName="Door_number" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
